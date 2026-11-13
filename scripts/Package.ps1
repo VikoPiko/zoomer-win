@@ -14,7 +14,7 @@ $stage = Join-Path $out "Zoomer-v$Version-windows-x64"
 if (Test-Path -LiteralPath $stage) { throw "Portable directory already exists: $stage" }
 New-Item -ItemType Directory -Path $stage | Out-Null
 Copy-Item -LiteralPath $binary -Destination (Join-Path $stage 'Zoomer.exe')
-foreach ($name in @('README.md', 'BUILD_RELEASE.md', 'Cargo.lock', 'config.example.toml', 'THIRD_PARTY_NOTICES.md')) {
+foreach ($name in @('README.md', 'BUILD_RELEASE.md', 'Cargo.lock', 'config.example.toml', 'THIRD_PARTY_NOTICES.md', 'LICENSE')) {
     Copy-Item -LiteralPath (Join-Path $root $name) -Destination $stage
 }
 Copy-Item -LiteralPath (Join-Path $root 'docs') -Destination (Join-Path $stage 'docs') -Recurse
