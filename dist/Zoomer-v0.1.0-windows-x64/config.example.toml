@@ -1,0 +1,19 @@
+# Copy to %APPDATA%/Zoomer/config.toml; Zoomer never overwrites this file.
+[hotkeys]
+activate = "Ctrl+Alt+Z"
+
+[camera]
+min_scale = 0.5
+max_scale = 16.0
+wheel_factor = 1.20
+zoom_half_life_ms = 90
+pan_half_life_ms = 120 # 0 disables release inertia
+
+[flashlight]
+radius_px = 240.0
+min_radius_px = 40.0
+max_radius_px = 1200.0
+outside_brightness = 0.28
+
+[appearance]
+filter = "linear" # or "nearest"
